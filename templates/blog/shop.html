@@ -1,0 +1,133 @@
+{% extends "shared/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body id="canvas">
+    {% block header %}
+      Shop
+    {% endblock header %}
+
+    {% block content %}
+      
+        <section id="intrologo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <img src="{% static 'images/adventureimg.png' %}" alt="The mid logo">
+                    </div>
+
+                    <div class="col-md-3">
+                        <div id="cartfont">
+                            {% if counter %}
+                              <i class="fas fa-shopping-cart"></i>
+                              <span id="countshape">{{counter}}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partitioneer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 shopnav">
+                        <div class="row">
+
+                            <div class="col-sm-12 shopnavig">
+                                <li>
+                                    <a href="">TOP PICKS</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">EXPLORE</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">BINGE SHOPPING</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">TRAVELLERS PACK</a>
+                                </li>
+                            </div>
+
+                            <div class="col-sm-12 shopnavig">
+                                <li>
+                                    <a href="">TOP DESIGNER PICKS</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">EXPLORE DESIGNERS</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">BINGE SHOPPING</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">LUXURY PICK</a>
+                                </li>
+                            </div>
+
+                            <div class="col-sm-12 shopnavig">
+                                <li>
+                                    <a href="">TOP FAMILY PICKS</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">FAMILY COLLECTION</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">BINGE SHOPPING</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="">FAMILY PICKS</a>
+                                </li>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <div class="row">
+                            {% if good %}
+                                {% for item in good  %}
+                                    <div class="col-sm-6 shopprod1">
+                                        <img src="{{item.bag_img.url}}" alt="First Sale">
+                                        <div class="image_overlay">
+                                            <div class="image_title">{{item.bag_type}}</div>
+                                            <p class="image_description">{{item.bag_descrip}}</p>
+                                            <p class="bag_price">{{item.bag_price}}</p>
+                                            {% if item.bag_quantity == 0 %}
+                                              <p class="bagstock">Out Of Stock</p>
+                                              {% else %}
+                                              <p class="bagquant">Quantity Left: {{item.bag_quantity}}</p>
+                                            {% endif %}
+                                            <li><a href="{% url 'buy' item.slug %}">BUY</a></li>
+                                            <li><a href="{% url 'addtocart' item.id %}">CART</a></li>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% endblock content %}
+</body>
+</html>
+
+<p></p>

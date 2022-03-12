@@ -1,0 +1,61 @@
+{% extends "shared/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sada</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body id="canvas">
+    {% block header %}
+      Home
+    {% endblock header %}
+    {% block content %}
+      
+    
+        <section id="Homecont">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="slickint1">
+                            Sada is your online go to for all things <br>
+                            Travel and Exploring blogs. Plus we are a one stop shop For Travelling <br>
+                            Utilities and Kits.
+                        </p>
+                    </div>
+            
+                    <div class="col-md-6 nonbulky">
+                        <p class="slickint2">
+                            JOIN OUR SUNDAY DISPATCHES
+                        </p>
+                        <p>Every travelling channel gets their information From Sada. Be at the top of your peers and stay informed on new Travelling experiences and get our discount summer bonuses.</p>
+                        <div class="row">
+                            <div class="col-md-4 form-group">
+                                    <input type="text" placeholder="Enter Your Email Address..." class="inserter">
+                            </div>
+                            <div class="col-md-4 sidebut">
+                                <p><a href="">Join Sada</a></p>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <img src="/images/shortcut.PNG" alt="Companies Vouch">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock content %}
+</body>
+</html>

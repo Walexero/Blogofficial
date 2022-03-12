@@ -1,0 +1,26 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% block title %}
+  Search Results
+{% endblock title %}
+{% block header %}
+  Search Results
+{% endblock header %}
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>This is Your Search Result:</h4>
+                    {% if getter %}
+                        {% for items in getter %}
+                        <li>
+                            <a href="{% url 'post' items.slug %}">{{items.title}}</a>
+                        </li>
+                        {% endfor %}
+                    {% else %}
+                    <span style="color: red;">No item matches Keyword Search, Try Again!</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+{% endblock content %}

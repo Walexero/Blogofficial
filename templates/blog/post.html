@@ -1,0 +1,77 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% block title %}
+  Post Page
+{% endblock title %}
+{% block header %}
+  Blog
+{% endblock header %}
+{% block content %}
+    <section id="postedit">
+        <div class="container">
+            <div class="row">
+                {% if posts %}
+                    <div class="col-md-10 mx-auto">
+                        <h3> {{posts.title}} </h3>
+                        {% if posts.leadimg %}
+                            <img src="{{posts.leadimg.url}}" alt="{{posts.title}}">
+                        {% endif %}
+                        <div>
+                            {{posts.body | safe}}
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="col-md-8">
+                    <h3>Your Comment</h3>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{form.body}}
+                        </div>
+                        <input type="submit" value="Post Comment">
+                    </form>
+                    <hr>
+                    <h3>Comments</h3>
+                    {% if comments %}
+                      {% for item in comments %}
+                        <div class="commentsec">
+                            <span class="commenter">
+                                {{item.commenter}} - Posted: {{item.date_posted}}
+                            </span>
+                            <p class="commentbody">
+                                {{item.body}}
+                            </p>
+                            <div class="container repliedcont">
+                                {% for reply in item.replies.all %}
+                                    <span >
+                                        {{reply.commenter}} - Replied: {{reply.date_posted}}
+                                    </span>
+                                    <p>
+                                        {{reply.body}}
+                                    </p>
+                                {% endfor %}
+                                <div class="form-group row">
+                                    <form action="" method="POST">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="item_id" value="{{item.id}}">
+                                        <div class="form-group">
+                                            {{form.body}}
+                                        </div>
+                                        <input type="submit" value="Post Reply">
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                      {% endfor %}
+                    {% endif %}
+                    <div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+  
+{% endblock content %}

@@ -1,0 +1,196 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+  Blog Page
+{% endblock title %}
+{% block header %}
+  Blog
+{% endblock header %}
+
+{% block content %}
+ <section id="contentarea">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 initialbox">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="thesearch">
+                            <input type="text" placeholder="Search.." class="theinput">
+                            <a href=""><i class="fas fa-search"></i></a>
+                        </div>
+                        <div class="spec">
+                            <p>Categories</p>
+                            <li>
+                                <a href="">Culture</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="">Creativity</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="">Food</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="">Travel</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="">Humor</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="">Music</a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="spec2">
+                            <p class="heeader">Top Posts</p>
+                            <ol id="Numbering">
+                                <li>
+                                    <p class="topic">
+                                        <a href="">Aeneon mottieg tortor ao sapen congue molestie.</a>
+                                    </p>
+                                    <span>
+                                        FOOD, TRAVEL - NOV 17, 2020
+                                    </span>
+                                </li>
+                    
+                                <li>
+                                    <p class="topic">
+                                        <a href="">Vestibulum ante ipsum primie in orci faucibus luctus.</a>
+                                    </p>
+                                    <span> MUSIC, HUMOR - NOV 18, 2020</span>
+                                </li>
+                                
+                                <li>
+                                    <p class="topic">
+                                        <a href="">Sapien etiam eu odio inposuere vitae bibendum bitae lorem.</a>
+                                    </p>
+                                    <span>FOOD, TRAVEL - NOV 17, 2020</span>
+                                </li>
+                                
+                                <li>
+                                    <p class="topic">
+                                        <a href="">Etiam au adia in sapien posuere vitae bibendum vitae lorem.</a>
+                                    </p>
+                                    <span>CULTURE, ART - NOV 11, 2020</span>
+                                </li>
+                                
+                                <li>
+                                    <p class="topic">
+                                        <a href="">Morbi eget leo a tellus gravida sagittis nec nec fellis</a>
+                                    </p>
+                                    <span>FOOD, TRAVEL - NOV 17, 2020</span>
+                                </li>
+                                
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 imgcol">
+                        <div class="row">
+                            <span><a href="">Instagram</a></span><br>
+                            <div class="col-sm-12">
+                                <div class="row">
+
+                                    <div class="col-sm-4 instimg1">
+                                        <img src="{% static 'images/instimg1.jpg' %}" alt="thumbnails">
+                                    </div>
+
+                                    <div class="col-sm-4 instimg2">
+                                        <img src="{% static 'images/instimg2.jpg' %}" alt="thumbnails">
+                                    </div>
+
+                                    <div class="col-sm-4 instimg3">
+                                        <img src="{% static 'images/instimg3.jpg' %}" alt="thumbnails">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 instshift">
+                                <div class="row">
+                                    <div class="col-sm-4 instimg4">
+                                        <img src="{% static 'images/instimg4.png' %}" alt="thumbnails">
+                                    </div>
+
+                                    <div class="col-sm-4 instimg5">
+                                        <img src="{% static 'images/instimg5.png' %}" alt="thumbnails">
+                                    </div>
+
+                                    <div class="col-sm-4 instimg6">
+                                        <img src="{% static 'images/instimg6.webp' %}" alt="thumbnails">
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="row">
+                    {% if posts %}
+                        {% for item in posts %}
+                        
+                            <div class="col-sm-6 secondbox">
+                                    {% if item.leadimg %}
+                                      <img src="{{item.leadimg.url}}" alt="Travelling pack blog">
+                                      {% elif item.leadvid %}
+                                        <video class="video-fluid">
+                                                <source src="{{item.leadvid.url}}" type="video/mp4" alt="Video packet">
+                                        </video>
+                                    {% endif %}
+                                    
+                                    <div class="paint">
+                                        <p class="nudge">FOOD, TRAVEL {{item.date_posted | timesince}}, By {{item.author}}</p>
+                                        <a href="{% url 'post' item.slug %}">{{item.title}}</a>
+                                        <p>
+                                            {{item.body | truncatechars:100 | safe}}
+                                        </p>
+                                        <a href="{% url 'post' item.slug %}" class="btn btn-primary" target="_blank">Read More</a>
+                                    </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 focuss">
+                                <li>
+                                    <a href="">1</a>
+                                </li>
+            
+                                <li>
+                                    <a href="">2</a>
+                                </li>
+            
+                                <li>
+                                    <a href="">3</a>
+                                </li>
+            
+                                <li>
+                                    <a href="">4</a>
+                                </li>
+            
+                                <li>
+                                    <a href="">></a>
+                                </li>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+ </section>
+ {% endblock content %}
+ 

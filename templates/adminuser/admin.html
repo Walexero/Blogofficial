@@ -1,0 +1,150 @@
+{% extends "shared/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+        Myadmin Page
+    {% endblock title %}
+
+    {% block header %}
+        Myadmin
+    {% endblock header %}
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+
+</head>
+{% block content %}
+    <section id="admincont">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 dashtray">
+                    <p class="dashtext"><i class="fab fa-dashcube"></i>Dashboard</p>
+                    <!-- <i class="fab fa-dashcube"></i> -->
+                    <hr>
+                    <p class="dashsec">INTERFACE</p>
+                    <li>
+                        <p class="dashtext"><i class="fas fa-cogs"></i>Components <a href="">></a></p>
+                        <!-- <i class="fas fa-cogs"></i> -->
+                    </li>
+                    
+                    <li>
+                        <p class="dashtext"><i class="fas fa-user"></i></i> <a href="{% url 'userprofile' %}">User Profile</a></p>
+                        <!-- <i class="fas fa-unlock-alt"></i> -->
+                    </li>
+
+                    <li>
+                        <p class="dashtext"><i class="fa fa-list" aria-hidden="true"></i>Utilities <a href="">></a></p>
+                        <!-- <i class="fa fa-list" aria-hidden="true"></i> -->
+                        <hr>
+                    </li>
+                    <p class="dashsec">ADDONS</p>
+
+                    <li>
+                        <p class="dashtext"><i class="fas fa-file-alt"></i>Pages <a href="">></a></p>
+                        <!-- <i class="fas fa-file-alt"></i> -->
+                    </li>
+
+                    <li>
+                        <p class="dashtext"><i class="fas fa-chart-bar"></i>Charts <a href="">></a></p>
+                        <!-- <i class="fas fa-chart-bar"></i> -->
+                    </li>
+
+                    <li>
+                        <p class="dashtext"><i class="fas fa-table"></i>Tables <a href="">></a></p>
+                        <!-- <i class="fas fa-table"></i> -->
+                    </li>
+
+                    
+                </div>
+
+                <div class="col-md-9 adminhead">
+                    <div class="container">
+                        <div class="row">
+                            <p>
+                                Dashboard
+                            </p>
+                            <a class="pleasework" href="">
+                                <i class="fas fa-download"></i>Generate Interactions
+                            </a>
+
+                            <div class="col-md-3 insideadmin">
+                                <p>
+                                    TRAFFIC(MONTHLY)
+                                </p>
+                                <p class="inssub">40,000</p>
+                            </div>
+
+                            <div class="col-md-3 insideadmin">
+                                <p>TRAFFIC(ANNUAL)</p>
+                                <p class="inssub">
+                                    1,200,000
+                                </p>
+                            </div>
+
+                            <div class="col-md-3 insideadmin">
+                                <p>BLOG(RATINGS)</p>
+                                <div class="container-fluid swish">
+                                    <div class="row">
+                                        <div class="col-md-12" rabbithole>
+                                            <a class="fas fa-star star1"></a>
+
+                                            <a class="fas fa-star star2"></a>
+
+                                            <a class="fas fa-star star3"></a>
+
+                                            <a class="fas fa-star star4"></a>
+
+                                            <a class="fas fa-star star5"></a>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 insideadmin">
+                                <p>REVENUE</p>
+                                <p class="inssub">$100,000</p>
+                            </div>
+                        </div>
+                        <div class="row insetadmin">
+                            <div class="col-md-9">
+                                <p>TRAFFIC OVERVIEW</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p>REVENUE(SOURCES)</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row interactor">
+                            <div class="col-md-12">
+                                <h1>BLOG INPUT</h1>
+                                <form action="" class="form-group">
+                                    <p>
+                                        <input type="text" placeholder="Title" class="form-control">
+                                    </p>
+                                    <p>
+                                        <input type="text" placeholder="Topic" class="form-control">
+                                    </p>
+                                    <p>
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="Body" class="form-control"></textarea>
+                                    </p>
+                                    
+                                    <button type="submit" class="btn btn-success">Publish</button>
+                                    <button type="reset" class="btn btn-danger">Reset</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+</html>

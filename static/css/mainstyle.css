@@ -1,0 +1,1143 @@
+/* For the Home Page Content Area */
+
+#Homecont .nonbulky{
+    margin-top: 100px;
+}
+
+#Homecont .slickint1{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Benne', serif;
+    padding: 50px;
+    line-height: 70px;
+}
+
+/* For the Second Column of Home Page Content Area */
+#Homecont .slickint2{
+    font-size: 20px;
+    color: purple;
+    margin-top: 70px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+#Homecont p{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+#Homecont .inserter{
+    /* border-left: purple ; */
+    /* background-color: white; */
+    /* border-left: purple 2px; */
+    border: none;
+    border-bottom: purple 2px solid;
+    width: 250px;
+    padding: 15px 5px;
+    
+}
+
+#Homecont input[type=text]{
+    font-family: 'Lato', sans-serif;;
+    font-size: 10px;
+}
+
+#Homecont input[type=text]:focus{
+    outline: none;
+}
+
+/* #Homecont .sidebut{
+} */
+
+#Homecont .sidebut p{
+    display: inline-block;
+    margin-left: 65px;
+    background-color: purple;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+#Homecont .sidebut a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#Homecont img{
+    margin-left: 15px;
+}
+
+/* For the topbar Blog */
+
+#canvas{
+    background-color: whitesmoke;
+}
+
+#topbar{
+    box-sizing: border-box;
+}
+
+#topbar .tray{
+    background-color: whitesmoke;
+}
+
+#topbar h3{
+    color: purple;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#topbar ul{
+    list-style-type: none;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+    margin-left: 330px;
+}
+
+#topbar li{
+    display: inline-block;
+    padding-right: 15px;
+    padding-top: 19px;
+}
+
+#topbar a{
+    text-decoration: none;
+    font-weight: bold;
+    color: purple;
+}
+
+/* For the nextbar */
+
+#nextbar{
+    box-sizing: border-box;
+}
+
+#nextbar .nextspace{
+    width: fit-content;
+}
+
+#nextbar .nextspace2{
+    width: fit-content;
+}
+
+#nextbar .tray2{
+    background-color: white;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+
+#nextbar h4{
+    color: purple;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#nextbar ul{
+    list-style-type: none;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+    margin-left: 200px;
+}
+
+#nextbar li{
+    display: inline-block;
+    padding-right: 15px;
+    padding-top: 19px;
+}
+
+#nextbar a{
+    text-decoration: none;
+    font-weight: bold;
+    color: silver;
+}
+
+/* For ContentSec */
+
+#contentarea{
+    box-sizing: border-box;
+}
+
+#contentarea .initialbox{
+    position: initial;
+}
+
+#contentarea .thesearch{
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-top: 35px;
+}
+
+#contentarea .theinput{
+    border: none;
+    color: whitesmoke;
+    font-weight:500;
+    margin-right: 14px;
+}
+
+#contentarea input[type=text]{
+    color: purple;
+}
+
+#contentarea input[type=text]:focus{
+    outline: none;
+}
+
+#contentarea .fas{
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        color: silver;
+        /* margin-left: 40px; */
+}
+
+#contentarea .spec{
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+#contentarea .spec p{
+    padding-top: 10px;
+    font-weight: bold;
+    color: purple;
+}
+
+#contentarea .spec li{
+    text-align: left;
+    display: inline;
+}
+
+#contentarea .spec a{
+    color: purple;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* For the Second content area in contentarea*/
+
+/* For the Third content area in contentarea*/
+
+#contentarea .secondbox{
+    margin-top: 35px;
+    border-radius: 9px;
+    border-radius: 9px 0px 0px 0px;
+    box-sizing: border-box, content-box;
+    width: fit-content;
+
+    position: initial;
+}
+
+#contentarea .secondbox img{
+    width: 349px;
+    border-radius: 9px 9px 0px 0px;
+    height: 232px;
+    position: relative;
+}
+
+#contentarea .nudge{
+    margin-top: 15px;
+    font-size: 10px;
+    color: silver;
+    font-weight: bold;
+}
+
+#contentarea p{
+    text-align: justify;
+}
+
+#contentarea .paint{
+    background-color: white;
+    position: initial;
+    width: 350px;
+    padding: 15px 15px;
+    border-radius: 0px 0px 9px 9px;
+}
+
+#contentarea .paint a{
+    color: purple;
+    font-weight: bold;
+}
+
+/* For the second row in contentarea Section (its first section*/
+
+.spec2{
+    background-color: white;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 9px;
+}
+
+#contentarea .rowtwo .heeader{
+    padding-top: 12px;
+    font-weight: bold;
+    color: purple;
+}
+
+#Numbering{
+    font-weight: bold;
+    font-size: 30px;
+    color: purple;
+}
+
+#Numbering .topic{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+}
+
+#Numbering span{
+    display: block;
+    font-size: 10px;
+    color: silver;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+#Numbering a{
+    display: inline;
+    color: purple;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* For the second row in contentarea Section (its second section)*/
+
+.rowtwo img{
+    width: 351px;
+    height: 232px;
+    border-radius: 9px 9px 0px 0px;
+}
+
+.rowtwo .shifter{
+    margin-top: 15px;
+}
+
+.rowtwo .stuck{
+    color: none;
+}
+
+/* For the third row in contentarea section (its third section) */
+
+/* For the image section */
+
+#contentarea .imgcol{
+    width: fit-content;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 40px;
+}
+
+#contentarea .imgcol .instimg1 img{
+    width: 85px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+#contentarea .imgcol .instimg2 img{
+    width: 85px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+#contentarea .imgcol .instimg3 img{
+    width: 85px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+#contentarea .instshift{
+    margin-top: 3px;
+}
+
+#contentarea .imgcol .instimg4 img{
+    width: 85px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+#contentarea .imgcol .instimg5 img{
+    width: 85px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+#contentarea .imgcol .instimg6 img{
+    width: 85px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.imgcol span{
+    display: block;
+    color: purple;
+    font-weight: bold;
+    position: relative;
+    margin-left: 28px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.imgcol span a{
+    color: purple;
+    text-decoration: none;
+}
+
+/* For the content section of rowthree */
+
+#disturbance{
+    width: 351px;
+    height: 232px;
+    border-radius: 9px 9px 0px 0px;
+}
+
+.rowthree .leveler{
+    margin-left: -20px;
+}
+
+/* For the third content in section rowthree */
+
+#disturbance2{
+    width: 351px;
+    height: 232px;
+    border-radius: 9px 9px 0px 0px;
+}
+
+/* For the number navigation section */
+
+.focuss{
+    margin-top: 50px;
+}
+
+.focuss li{
+    list-style-type: none;
+    display: inline;
+    padding-right: 20px;
+}
+
+.focuss a{
+    display: inline-block;
+    padding: 1px 8px;
+    background-color: white;
+    box-shadow: 2px 2px grey;
+    color: purple;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.focuss a:hover{
+    background-color: purple;
+    color: whitesmoke;
+}
+
+/* For the Footer */
+footer{
+    background-color: white;
+    padding-top: 15px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+
+footer h3{
+    color: purple;
+    font-weight: bold;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+footer .slant{
+    font-size: 8px;
+}
+
+footer .heeader{
+    padding-top: 10px;
+    font-weight: bold;
+    color: purple;
+}
+
+footer li{
+    list-style-type: none;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+footer li a{
+    text-decoration: none;
+    text-transform: none;
+    color: purple;
+    font-size: 13px;
+}
+
+footer .transformer{
+    text-decoration: none;
+    text-transform: none;
+}
+
+footer .fontawe li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* For Shop IntroLogo */
+#intrologo img{
+    height: 150px;
+}
+
+/* For Shop Page nav */
+
+#partitioneer .shopnav{
+    margin-top: 70px;
+}
+
+#partitioneer .shopnav li{
+    list-style-type: none;
+    margin-bottom: 15px;
+    /* background-color: white; */
+}
+
+#partitioneer .shopnav hr{
+    width: 100px;
+    text-align: left;
+    /* border: 1px solid white; */
+}
+
+#partitioneer .shopnav li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: purple;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    margin-bottom: 15px;
+}
+
+#partitioneer .shopnav a:hover{
+    width: 300cm;
+    height: 100cm;
+    clip-path: polygon(0% 0%, 75% 0%, 86% 47%, 75% 100%, 0% 100%);
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: grey;
+    color: silver;
+}
+
+/* For second colomn in the Section */
+
+#partitioneer .shopprod1{
+    position: relative;
+    width: 400px;
+}
+
+#partitioneer .shopprod1 img{
+    width: 100%;
+    display: block;
+    border-radius: 9px;
+    padding: 40px;
+    
+}
+
+#partitioneer .shopprod1 .image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 330px;
+    border-radius: 9px;
+    margin-left: 55px;
+    color: black;
+    font-family:cursive;
+    background-color: rgba(192, 192, 192, 0.479);
+    opacity: 0;
+    transition: 0.25s;
+    margin-top: 40px;
+}
+
+#partitioneer .shopprod1 .image_overlay:hover{
+    opacity: 1;
+}
+
+#partitioneer .shopprod1 .image_title{
+    text-align: center;
+    padding-top: 90px;
+    font-size: 30px;
+}
+
+#partitioneer .shopprod1 .image_description{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+#partitioneer .shopprod1 .image_overlay li{
+    display: inline;
+    list-style-type: none;
+    margin-left: 45px;
+    text-align: center;
+}
+
+#partitioneer .shopprod1 .image_overlay li a{
+    text-align: center;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    background: whitesmoke;
+    border-radius: 9px;
+}
+
+/* For the Second column */
+ #partitioneer .shopprod2{
+     position: relative;
+     width: 400px;
+     /* border: 1px solid red; */
+ }
+
+ #partitioneer .shopprod2 img{
+     width: 271px;
+     height: 334px;
+     margin-top: 36px;
+     /* padding: 40px; */
+ }
+
+ #partitioneer .shopprod2 .image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 272px;
+    height: 335px;
+    border-radius: 9px;
+    margin-left: 15px;
+    color: black;
+    font-family:cursive;
+    background-color: rgba(192, 192, 192, 0.479);
+    opacity: 0;
+    transition: 0.25s;
+    margin-top: 35px;
+}
+
+#partitioneer .shopprod2 .image_overlay:hover{
+    opacity: 1;
+}
+
+#partitioneer .shopprod2 .image_title{
+    text-align: center;
+    padding-top: 80px;
+    font-size: 30px;
+}
+
+#partitioneer .shopprod2 .image_description{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+#partitioneer .shopprod2 .image_overlay li{
+    display: inline;
+    list-style-type: none;
+    margin-left: 45px;
+    text-align: center;
+}
+
+#partitioneer .shopprod2 .image_overlay li a{
+    text-align: center;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    background: whitesmoke;
+    border-radius: 9px;
+}
+
+/* For the Post Image */
+#postedit img{
+    width: 300px;
+    height: 300px;
+}
+
+/* For Shop Page sec2 */
+
+#partitioneer2 .shopnav{
+    margin-top: 70px;
+}
+
+#partitioneer2 .shopnav li{
+    list-style-type: none;
+    margin-bottom: 15px;
+    /* background-color: white; */
+}
+
+#partitioneer2 .shopnav hr{
+    width: 100px;
+    text-align: left;
+    /* border: 1px solid white; */
+}
+
+#partitioneer2 .shopnav li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: purple;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    margin-bottom: 15px;
+}
+
+#partitioneer2 .shopnav a:hover{
+    width: 300cm;
+    height: 100cm;
+    clip-path: polygon(0% 0%, 75% 0%, 86% 47%, 75% 100%, 0% 100%);
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: grey;
+    color: silver;
+}
+
+/* For second colomn in the Section2 */
+
+#partitioneer2 .shopprod1{
+    position: relative;
+    width: 400px;
+}
+
+#partitioneer2 .shopprod1 img{
+    width: 100%;
+    display: block;
+    border-radius: 9px;
+    padding: 40px;
+    
+}
+
+#partitioneer2 .shopprod1 .image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 330px;
+    border-radius: 9px;
+    margin-left: 55px;
+    color: black;
+    font-family:cursive;
+    background-color: rgba(192, 192, 192, 0.479);
+    opacity: 0;
+    transition: 0.25s;
+    margin-top: 40px;
+}
+
+#partitioneer2 .shopprod1 .image_overlay:hover{
+    opacity: 1;
+}
+
+#partitioneer2 .shopprod1 .image_title{
+    text-align: center;
+    padding-top: 90px;
+    font-size: 30px;
+}
+
+#partitioneer2 .shopprod1 .image_description{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+#partitioneer2 .shopprod1 .image_overlay li{
+    display: inline;
+    list-style-type: none;
+    margin-left: 45px;
+    text-align: center;
+}
+
+#partitioneer2 .shopprod1 .image_overlay li a{
+    text-align: center;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    background: whitesmoke;
+    border-radius: 9px;
+}
+
+/* For the Second column */
+ #partitioneer2 .shopprod2{
+     position: relative;
+     width: 400px;
+     /* border: 1px solid red; */
+ }
+
+ #partitioneer2 .shopprod2 img{
+     width: 271px;
+     height: 334px;
+     margin-top: 36px;
+     /* padding: 40px; */
+ }
+
+ #partitioneer2 .shopprod2 .image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 272px;
+    height: 335px;
+    border-radius: 9px;
+    margin-left: 15px;
+    color: black;
+    font-family:cursive;
+    background-color: rgba(192, 192, 192, 0.479);
+    opacity: 0;
+    transition: 0.25s;
+    margin-top: 35px;
+}
+
+#partitioneer2 .shopprod2 .image_overlay:hover{
+    opacity: 1;
+}
+
+#partitioneer2 .shopprod2 .image_title{
+    text-align: center;
+    padding-top: 80px;
+    font-size: 30px;
+}
+
+#partitioneer2 .shopprod2 .image_description{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+#partitioneer2 .shopprod2 .image_overlay li{
+    display: inline;
+    list-style-type: none;
+    margin-left: 45px;
+    text-align: center;
+}
+
+#partitioneer2 .shopprod2 .image_overlay li a{
+    text-align: center;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    background: whitesmoke;
+    border-radius: 9px;
+}
+
+/* For Shop Page sec2 */
+
+#partitioneer3 .shopnav{
+    margin-top: 70px;
+}
+
+#partitioneer3 .shopnav li{
+    list-style-type: none;
+    margin-bottom: 15px;
+    /* background-color: white; */
+}
+
+#partitioneer3 .shopnav hr{
+    width: 100px;
+    text-align: left;
+    /* border: 1px solid white; */
+}
+
+#partitioneer3 .shopnav li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: purple;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    margin-bottom: 15px;
+}
+
+#partitioneer3 .shopnav a:hover{
+    width: 300cm;
+    height: 100cm;
+    clip-path: polygon(0% 0%, 75% 0%, 86% 47%, 75% 100%, 0% 100%);
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: grey;
+    color: silver;
+}
+
+/* For second colomn in the Section3 */
+
+#partitioneer3 .shopprod1{
+    position: relative;
+    width: 400px;
+}
+
+#partitioneer3 .shopprod1 img{
+    width: 100%;
+    display: block;
+    border-radius: 9px;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+#partitioneer3 .shopprod1 .image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 330px;
+    border-radius: 9px;
+    margin-left: 55px;
+    color: black;
+    font-family:cursive;
+    background-color: rgba(192, 192, 192, 0.479);
+    opacity: 0;
+    transition: 0.25s;
+    margin-top: 40px;
+}
+
+#partitioneer3 .shopprod1 .image_overlay:hover{
+    opacity: 1;
+}
+
+#partitioneer3 .shopprod1 .image_title{
+    text-align: center;
+    padding-top: 90px;
+    font-size: 30px;
+}
+
+#partitioneer3 .shopprod1 .image_description{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+#partitioneer3 .shopprod1 .image_overlay li{
+    display: inline;
+    list-style-type: none;
+    margin-left: 45px;
+    text-align: center;
+}
+
+#partitioneer3 .shopprod1 .image_overlay li a{
+    text-align: center;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    background: whitesmoke;
+    border-radius: 9px;
+}
+
+/* For the Second column */
+ #partitioneer3 .shopprod2{
+     position: relative;
+     width: 400px;
+     /* border: 1px solid red; */
+ }
+
+ #partitioneer3 .shopprod2 img{
+     width: 271px;
+     height: 334px;
+     margin-top: 36px;
+     /* padding: 40px; */
+ }
+
+ #partitioneer3 .shopprod2 .image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 272px;
+    height: 335px;
+    border-radius: 9px;
+    margin-left: 15px;
+    color: black;
+    font-family:cursive;
+    background-color: rgba(192, 192, 192, 0.479);
+    opacity: 0;
+    transition: 0.25s;
+    margin-top: 35px;
+}
+
+#partitioneer3 .shopprod2 .image_overlay:hover{
+    opacity: 1;
+}
+
+#partitioneer3 .shopprod2 .image_title{
+    text-align: center;
+    padding-top: 80px;
+    font-size: 30px;
+}
+
+#partitioneer3 .shopprod2 .image_description{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+#partitioneer3 .shopprod2 .image_overlay li{
+    display: inline;
+    list-style-type: none;
+    margin-left: 45px;
+    text-align: center;
+}
+
+#partitioneer3 .shopprod2 .image_overlay li a{
+    text-align: center;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    background: whitesmoke;
+    border-radius: 9px;
+}
+
+/* For the CreatePost Page */
+
+#createholder{
+    width: fit-content;
+}
+
+/* For Admin Page */
+
+#admincont .dashtray{
+    background-color: rgb(196, 125, 196);
+    margin-left: 25px;
+    width: 25px;
+}
+
+#admincont .dashtray li{
+    list-style-type: none;
+}
+
+/* #admincont .fab{
+    color: white;
+    margin-right: 5px;
+    font-family: fontawesome !important;
+} */
+
+#admincont .dashtray i{
+    color: white;
+    margin-right: 5px;
+    /* font-family: fontawesome !important; */
+}
+
+#admincont .dashtext{
+    color: white;
+    font-family: 'Benne', serif;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#admincont hr{
+    color: whitesmoke;
+    margin-bottom: none;
+    display: inline-block;
+}
+
+#admincont .dashsec{
+    color: whitesmoke;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* For the second section */
+/* 
+#admincont n.adminhead{
+    border: 1px red solid;
+} */
+
+
+
+#admincont .adminhead p{
+    color: purple;
+    font-weight: bold;
+    font-family: 'Benne', serif;
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 200px;
+
+}
+
+#admincont .fa-download:before{
+    color: whitesmoke;
+    padding-bottom: none;
+}
+
+#admincont .adminhead .pleasework{
+    color: whitesmoke;
+    text-align: right;
+    margin-left: 280px;
+    padding: 3px 4px;
+    padding-bottom: none;
+    background-color: purple;
+    font-size: 10px;
+    border-radius: 9px;
+    display: inline-block;
+    height: 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#admincont .insideadmin{
+    border: none;
+    border-left: 3px solid #9442ff;
+}
+
+#admincont .insideadmin p{
+    font-size: 10px;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+#admincont .insideadmin .inssub{
+    font-size: 10px;
+    display: inline;
+    margin-top: 0px;
+}
+
+#admincont .insetadmin p{
+    color: plum;
+    font-size: 10px;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+
+/* For the 5 star rating */
+#admincont .swish{
+    /* border: 1px solid red; */
+    direction: rtl;
+}
+
+#admincont .swish a{
+    font-size: 20px;
+    color: #313131;
+    transition: 0.3s all;
+}
+
+#admincont .swish a:hover{
+    color: goldenrod;
+}
+
+#admincont .swish .star1:hover ~ a{
+    color: goldenrod;
+}
+#admincont .swish .star2:hover ~ a{
+    color: goldenrod;
+}
+#admincont .swish .star3:hover ~ a{
+    color: goldenrod;
+}
+#admincont .swish .star4:hover ~ a{
+    color: goldenrod;
+}
+#admincont .swish .star5:hover ~ a{
+    color: goldenrod;
+}
+
+#admincont .interactor h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size:x-large;
+    margin-left: 25px;
+}

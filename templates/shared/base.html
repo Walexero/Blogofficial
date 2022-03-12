@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+    <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+    
+    <title>
+        {% block title %}
+          
+        {% endblock title %}
+    </title>
+</head>
+<body id="canvas">
+    <section id="topbar">
+        <div class="container">
+            <div class="row tray mx-auto">
+                <div class="col-sm-3">
+                    <h3>
+                        Sada.
+                    </h3>
+                </div>
+
+                <div class="col-sm-9">
+                    <ul>
+                        <li>
+                            <a class="" href="{% url 'home' %}">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="">Portfolio</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'blog' %}">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'shop' %}">Shop</a>
+                        </li>
+
+                        <li>
+                            <a href="">Elements</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'myadmin' %}">Admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="nextbar">
+        <div class="container-fluid">
+            <div class="row tray2 mx-auto">
+
+                <div class="col-sm-4 nextspace">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>
+                                {% block header %}
+                        
+                                {% endblock header %}
+                            </h4>
+                        </div>
+
+                        <div class="col-sm-6">
+                        
+                            {% if request.user.is_authenticated %}
+                                <li>
+                                    Welcome 
+                                    {% if request.user.first_name %}
+                                    <a href="{% url 'userprofile' %}">
+                                    {{ request.user.first_name }}
+                                    {% else %}
+                                    {{ request.user.username }}
+                                    </a>     
+                                    {% endif %}
+                                </li>
+                            {% else %}
+                            <p>Anonymous</p>
+                            {% endif %}
+                       
+                        </div>
+                    </div>
+
+                    
+                    
+                    
+                </div>
+
+                <div class="col-sm-8 nextspace2">
+                    
+                    <ul>
+                    {% if request.user.is_authenticated %}
+                        <li>
+                            <a href="{% url 'password_change' %}" class="btn btn-danger">Change Password</a>
+                        </li>
+                    {% endif %}
+
+                        {% if request.user.is_not_authenticated %}
+                            <li>
+                                <a href="{% url 'register' %}" class="btn btn-info">Register</a>
+                            </li>
+                        {% endif %}
+
+                        <li>
+                            <a href="{% url 'createpost' %}" class='btn btn-warning'>Create Post</a>
+                        </li>
+
+                        {% if request.user.is_not_authenticated %}
+                            <li>
+                                <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+                            </li>
+
+                        {% endif %}
+                        
+                        {% if request.user.is_authenticated %}
+                            <li>
+                                <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+                            </li>
+                        {% endif %}
+                        <form action="{% url 'search' %}" class="form-inline my-2 my-lg-0">
+                            <input name="mysearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+                        </form>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </section>
+    {% block content %}
+      
+    {% endblock content %}
+    <footer>
+        <div class="container-fluid">
+            <div class="row mx-auto">
+
+                <div class="col-sm-3">
+                    <h3>
+                        Sada.
+                    </h3>
+                    <p class="slant">
+                        &copy;2018 Energies Themes
+                    </p>
+                </div>
+
+                <div class="col-sm-2">
+                    <p class="heeader">About us</p>
+                    <li><a class="transformer" href="">Aenean mattis</a></li>
+                    <li><a class="transformer" href="">Vestibulum ente</a></li>
+                    <li><a class="transformer" href="">Sapien etiam</a></li>
+                    <li><a class="transformer" href="">Morbi eget leo</a></li>
+                </div>
+
+                <div class="col-sm-2">
+                    <p class="heeader">Product</p>
+                    <li><a class="transformer" href="">Vestibulum diam</a></li>
+                    <li><a class="transformer" href="">Phasellus sapien eros</a></li>
+                    <li><a class="transformer" href="">Finbus bibendum nulla</a></li>
+                    <li><a class="transformer" href="">Duis tristique, turpis</a></li>
+                </div>
+
+                <div class="col-sm-2 fontawe">
+                    <p class="heeader">Contact us</p>
+                    <p class="slant">Helio@sadaweb.com <br>
+                    +08456-3364-202</p>
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-twitch"></i></li>
+                        <li><i class="fab fa-youtube"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                </div>
+
+                <div class="col-sm-3">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

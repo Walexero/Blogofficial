@@ -1,0 +1,17 @@
+ {% for ones in buygoods  %}
+                               {{ones.bag_type}}
+                             {% endfor %}
+{% if goods %}
+                             {% for items in goods %}
+                               <div>
+                                   {{items.bag_type}}
+                               </div>
+                             {% endfor %}
+                           {% endif %}
+
+items=buygoods
+
+ if orders:
+        for fields in orders.items:
+            fields = buygoods
+

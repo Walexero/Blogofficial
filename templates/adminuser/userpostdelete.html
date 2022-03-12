@@ -1,0 +1,35 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+  Are You Sure You Want to Delete Post?
+{% endblock title %}
+{% block header %}
+  Delete Post
+{% endblock header %}
+
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 mx-auto">
+                    <div class="card">
+                        <h4>Are You Sure You Want to Delete Post?</h4>
+                        <div class="card-body">
+                            {% if info %}
+                            {% for item in info %}
+                               <p>
+                                Note: Deleting this post means its not retrievable and every comment associated with it would be deleted.
+                                </p>
+                                <p><b>Delete Post:</b> {{item.title}}</p>
+                            <a class="btn btn-danger" href="{% url 'delpost' item.title %}">Yes</a>
+                            <a class="btn btn-success" href="{% url 'userprofile' %}">Cancel</a>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
+ 

@@ -1,0 +1,15 @@
+
+TODO-LIST
+=========
+continue django documentation on
+on star-ratings from Template
+tags tomorrow
+
+url(r'^ratings/', include('star_ratings.urls', namespace = 'ratings', app_name = 'ratings')),
+
+'django.core.context_processors.request',
+
+{% ratings object %}
+{% load ratings %}
+
+

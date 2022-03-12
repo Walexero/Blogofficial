@@ -1,0 +1,38 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+  User Profile
+{% endblock title %}
+{% block header %}
+  User Profile
+{% endblock header %}
+
+{% block content %}
+        <div class="container">
+            <div>
+              <h3><i class="fas fa-user">User Profile</h3>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <ul>
+                  <li><a href="">My Posts</a></li>
+                  <li><a href="{% url 'password_change' %}">Change Password</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-9">
+                {% if post %}
+                  {% for item in post %}
+                  <h3>{{item.title}}</h3>
+                  <div>
+                    {{item.leadimg.url}}
+                  </div>                  
+                  {{item.body}}    
+                  {% endfor %}            
+                {% endif %}
+              </div>
+          </div>
+        </div>
+{% endblock content %}
+ 

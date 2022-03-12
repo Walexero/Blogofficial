@@ -1,0 +1,44 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% block title %}
+  Buy Page
+{% endblock title %}
+{% block header %}
+  Buy
+{% endblock header %}
+{% block content %}
+<section id="buysec">
+  <div class="container">
+    <div class="row">
+      {% if goodbuy %}
+        {% for item in goodbuy %}
+          <div class="col-sm-8 goodcontain">
+            <div class="row">
+              <div class="col-sm-4 goodcontain1">
+                <img src="{{item.bag_img.url}}" alt="Good Selected">
+              </div>
+
+              <div class="col-sm-8 goodcontain2">
+                <p class="typedis">{{item.bag_type}}</p>
+                <p class="freer">Star-ratings field</p>
+                <span class="freer2">{{item.seller}}</span>
+                <hr>
+                <p class="pricer">{{item.bag_price}}</p>
+                <span class="freer">discounted price field</span>
+                <hr>
+                <button class="btn btn-warning">BUY</button>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <h3>This is for the content section</h3>
+          </div>
+
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,75 @@
+class Cartitem(models.Model):
+    product = models.ForeignKey(Shop, on_delete=models.CASCADE)
+    is_ordered = models.BooleanField(default=False)
+    date_added = models.DateTimeField(auto_now=True)
+    date_ordered = models.DateTimeField(null=True)
+
+    def __str__(self):
+        return self.product.bag_type
+
+    class Meta:
+        db_table = 'cartitems'
+        managed = True
+        verbose_name = 'CartItem'
+        verbose_name_plural = 'CartItems'
+
+class Cart(models.Model):
+    ref_code = models.CharField(max_length=200)
+    cart_owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    is_ordered = models.BooleanField(default=False)
+    date_ordered = models.DateTimeField(auto_now=True)
+    items = models.ManyToManyField(Cartitem)
+
+    def get_cart_item(self):
+        return self.items.all()
+    
+    def get_cart_total(self):
+        return sum([item.product.bag_price for item in self.items.all()])
+
+    def __str__(self):
+        return str(self.cart_owner)
+
+    class Meta:
+        db_table = 'carts'
+        managed = True
+        verbose_name = 'Cart'
+        verbose_name_plural = 'Carts'
+
+admin.site.register(Cart)
+admin.site.register(Cartitem)
+Cart,Cartitem
+Cartitem, Cart
+
+def addtocart(request,id):
+    goods = Shop.objects.filter(id=id).first()
+    buygoods = Cartitem.objects.get_or_create(product_id = goods.id)
+    orders = Cart.objects.all()
+    for things in orders:
+        things.items.set(buygoods)
+        things.cart_owner = request.user
+
+        
+    context = {
+        'goods':goods,
+        'buygoods':buygoods,
+        'orders':orders,
+        'things':things
+    }
+    return render(request, 'blog/cart.html',context)
+ path('addtocart/<str:id>', views.addtocart, name='addtocart')  
+
+
+def shop(request):
+    goods = Shop.objects.order_by('-bag_price')
+    goodscarted = Cartitem.objects.count()
+    context = {
+        'good':goods,
+        'counter':goodscarted
+    }
+    return render(request, 'blog/shop.html',context)
+
+path('shop/', views.shop, name = 'shop'),
+
+
+
+

@@ -1,0 +1,48 @@
+{% extends "shared/base.html" %}
+{% load static %}
+{% block title %}
+  Login Here
+{% endblock title %}
+{% block header %}
+  Login
+{% endblock header %}
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 mx-auto">
+                    <h3>Login</h3>
+                    {% if request.user.is_authenticated %}
+                                <li>
+                                    Welcome 
+                                    {% if request.user.first_name %}
+                                    <a href="#">
+                                    {{ request.user.first_name }}
+                                    {% else %}
+                                    {{ request.user.username }}
+                                    </a>     
+                                    {% endif %}
+                                </li>
+                            {% else %}
+                            <p>Anonymous</p>
+                    {% endif %}
+                    {% if form %}
+                      <p>Invalid username/passowrd</p>
+                    {% endif %}
+                    {% if next %}
+                      <p>You need to login to access this page</p>
+                    {% endif %}
+
+                    <form action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    <p>Username: {{form.username}}</p>
+                    <p>Password: {{form.password}}</p>
+                    <p>
+                        <input class="btn btn-success" type="submit" value="Login">
+                        <input class="btn" type="hidden" value="{{ next }}">
+                        If you forgot your password <a href="{% url 'password_reset' %}">Reset</a>Here
+                    </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
